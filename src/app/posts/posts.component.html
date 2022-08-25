@@ -1,0 +1,21 @@
+<div>
+  <label for="">
+    <input
+      (keyup.enter)="CreatePost(input)" 
+      #title
+      type="text"
+      class="form-control">
+  </label>
+
+  <ul>
+    <li *ngFor="let post of posts">
+      <button
+        (click)="updatePost(post)"
+        type="button"
+        class="form-control">
+          Update
+      </button>
+        {{ post.heading }}
+    </li>
+  </ul>
+</div>
